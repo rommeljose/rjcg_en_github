@@ -53,4 +53,5 @@ section {
 .repo-card h2 {
     color: #1B9AAA;
     font-size: 2rem;
+    word-break: break-word;
 }

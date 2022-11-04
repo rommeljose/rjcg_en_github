@@ -1,13 +1,14 @@
 
 
-function Repo() {
+function Repo(props) {
+    console.log(props.userElement.name)
     return (
 
         <div className="repo-card">
-            <h2 className="repo-name">Repo Name</h2>
-            <p className="language">Langauge: JavaScript</p>
-            <p className="date">Start date & time: 20/04/10:15:20</p>
-            <p className="visibility">Visibility: Public</p>
+            <h2 className="repo-name">{props.userElement.name}</h2>
+            <p className="language">Langauge: {props.userElement.language === null ? "none" : props.userElement.language}</p>
+            <p className="date">Start date & time: {props.userElement.created_at}</p>
+            <p className="visibility">Visibility: {props.userElement.visibility}</p>
         </div>
         
     )

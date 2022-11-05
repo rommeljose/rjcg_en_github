@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import { RouterProvider, createBrowserRouter, createRoutesFromElements, Route, Outlet } from 'react-router-dom'
 import App from './App'
 import Home from './pages/Home'
-import RepoDetails from './pages/RepoDetails'
+import RepoDetails from './pages/Repodetails'
 import ErrorPage from './pages/ErrorPage'
 import AppOutlet from './pages/AppOutlet'
 

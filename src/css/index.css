@@ -16,7 +16,7 @@ body {
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 2.1em;
 }
 
 p {
@@ -93,23 +93,19 @@ a:hover {
 
 #repodetail p {
     padding: 15px 0;
+    word-break: break-all;
 }
 
 .repo-mini-details {
-    font-size: 0.8rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex: 1;
-    flex-wrap: wrap;
     gap: 10px 50px;
     margin: 0 0 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 }
 
 .repo-mini-details  p {
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 0.3rem;
 }
 
@@ -134,4 +130,19 @@ a:hover {
 
 .error-status {
     font-size: 5rem;
+}
+
+@media screen and (max-width: 380px) {
+    .repo-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .github-icon {
+        font-size: 2rem;
+    }
+
 }

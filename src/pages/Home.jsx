@@ -10,34 +10,21 @@ function Home() {
 
 
   const fetchRepos = () => {
-    fetch(`https://api.github.com/users/mbonamensa/repos?per_page=5&page=${currentPage}`)
+    fetch(`https://api.github.com/users/mbonamensa/repos?per_page=6&page=${currentPage}`)
     .then((response) => (response.json()))
     .then((data) => {
-      setUser(prevUser => 
-        [...prevUser, ...data])
-        // debugger
+      setUser([...user, ...data])
     })
   }
 
-  // useEffect(() => {
-  //   if (currentPage > 1) {
-  //     fetchRepos()
-  //   }
-  // }, [currentPage]) 
-
   useEffect(() => {
-    if (user.length === 0) {
-      fetchRepos()
-      debugger
-    }
-    
-  }, [])
+    fetchRepos()
+  }, [currentPage]) 
+
 
   const viewMore = () => {
-    setCurrentPage(prevPage => prevPage++)
+    setCurrentPage(currentPage + 1)
   }
-
-
     const userElements = user.map((userElement) => {
         return (
             <div className="repo-card" key={userElement.id}>
@@ -51,10 +38,12 @@ function Home() {
 
 
     return (
+      <>
         <section className="repo-container">
             {userElements}
-            <p onClick={viewMore}>View More</p>
         </section>
+        <p className="view-more" onClick={viewMore}>View More</p>
+      </>
     )
 }
 

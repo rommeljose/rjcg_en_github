@@ -26,12 +26,16 @@ p {
 .navbar {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
     justify-content: center;
     background-color: #1B9AAA;
     text-align: center;
     padding: 20px;
     margin-bottom: 100px
+}
+
+.github-icon {
+    font-size: 3rem;
 }
 
 section {
@@ -44,6 +48,18 @@ section {
     grid-gap: 30px;
     width: 90%;
     margin: 0 auto;
+}
+
+.view-more {
+    text-align: center;
+    font-size: 1rem;
+    color: #1B9AAA;
+    cursor: pointer;
+    margin: 50px 0 60px;
+}
+
+.view-more:hover {
+    text-decoration: underline;
 }
 
 .repo-card,
@@ -107,11 +123,15 @@ a:hover {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 50h;
 }
 
 .error-page h1 {
     font-size: 3rem;
     color: #1B9AAA;
     margin-bottom: 20px;
+}
+
+.error-status {
+    font-size: 5rem;
 }

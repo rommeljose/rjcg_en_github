@@ -8,7 +8,6 @@ function RepoDetails() {
     const [details, setDetails] = useState({})
     const [branch, setBranch] = useState({})
     const [deployment, setDeployment] = useState({})
-    const [time, setTime] = useState(new Date());
     
     
 

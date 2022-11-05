@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;700&display=swap');
 
 * {
     padding: 0;
@@ -11,6 +11,8 @@ body {
     font-family: 'Inter', sans-serif;
     color: #f5f1e3;
     background-color: #050505;
+    letter-spacing: 0.02rem;
+    min-height: 100vh;
 }
 
 h1 {
@@ -44,14 +46,72 @@ section {
     margin: 0 auto;
 }
 
-.repo-card {
+.repo-card,
+.repodetail-card {
     border: 1px solid #1B9AAA;
     padding: 13px;
     border-radius: 5px;
 }
 
-.repo-card h2 {
+a {
+    text-decoration: none;
+    color: #1B9AAA;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.repo-name {
     color: #1B9AAA;
     font-size: 2rem;
     word-break: break-word;
+}
+
+#repodetail {
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+#repodetail p {
+    padding: 15px 0;
+}
+
+.repo-mini-details {
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    flex-wrap: wrap;
+    gap: 10px 50px;
+    margin: 0 0 15px;
+}
+
+.repo-mini-details  p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+}
+
+.icons {
+    color: #1B9AAA;
+}
+
+
+.error-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.error-page h1 {
+    font-size: 3rem;
+    color: #1B9AAA;
+    margin-bottom: 20px;
 }

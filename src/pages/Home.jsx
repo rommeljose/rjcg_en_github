@@ -7,13 +7,20 @@ import { Link } from "react-router-dom"
 function Home() {   
   const [user, setUser] = useState([])
   const [currentPage, setCurrentPage] = useState(1)
+  const [showViewMore, setShowViewMore] = useState("")
 
 
   const fetchRepos = () => {
     fetch(`https://api.github.com/users/mbonamensa/repos?per_page=6&page=${currentPage}`)
     .then((response) => (response.json()))
     .then((data) => {
-      setUser([...user, ...data])
+      if (data.length === 0) {
+        setShowViewMore("End of Repos")
+      }else {
+        setUser([...user, ...data])
+        setShowViewMore("View More")
+      }
+      
     })
   }
 
@@ -42,7 +49,7 @@ function Home() {
         <section className="repo-container">
             {userElements}
         </section>
-        <p className="view-more" onClick={viewMore}>View More</p>
+        <p className="view-more" onClick={viewMore}>{showViewMore}</p>
       </>
     )
 }

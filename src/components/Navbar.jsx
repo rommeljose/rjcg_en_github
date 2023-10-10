@@ -41,5 +41,5 @@ const isHomePage = () => {
 
     </div>
   );
-
+      }
 export default Navbar;

@@ -1,6 +1,6 @@
-# Altschool GitHub Portfolio Exam Project
+# Repositorios GitHub 
 
-This is a solution to the GitHub Portfolio exam project given by AltSchool Africa [School of Software Engineering](https://altschoolafrica.com/schools/engineering) tutors.
+Repositorios de Rommel Contreras en GitHub
 
 ## Table of contents
 
@@ -73,6 +73,6 @@ These resources were useful in helping me build this project
 
 ## Author
 
-- Website - [Maame Yaa Serwaa Bona-Mensa](https://mbonamensa.netlify.app)
-- Twitter - [@mys_bm](https://www.twitter.com/mys_bm)
+- Website - [Rommel Contreras](https://blog.cenitlab.com/)
+
 

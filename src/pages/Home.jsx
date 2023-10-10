@@ -9,16 +9,16 @@ function Home() {
   const [currentPage, setCurrentPage] = useState(1)
   const [showViewMore, setShowViewMore] = useState("")
 
-
+ 
   const fetchRepos = () => {
-    fetch(`https://api.github.com/users/mbonamensa/repos?per_page=6&page=${currentPage}`)
+    fetch(`https://api.github.com/users/rommeljose/repos?per_page=6&page=${currentPage}`)
     .then((response) => (response.json()))
     .then((data) => {
       if (data.length === 0) {
-        setShowViewMore("End of Repos")
+        setShowViewMore("Fin")
       }else {
         setUser([...user, ...data])
-        setShowViewMore("View More")
+        setShowViewMore("Ver más")
       }
       
     })

@@ -12,7 +12,7 @@ function RepoDetails() {
     
 
   useEffect(() => {
-    fetch(`https://api.github.com/repos/mbonamensa/${id}`)
+    fetch(`https://api.github.com/repos/rommeljose/${id}`)
     .then((response) => (response.json()))
     .then((data) => {
       setDetails(data)
@@ -20,7 +20,7 @@ function RepoDetails() {
   }, []) 
 
   useEffect(() => {
-    fetch(`https://api.github.com/repos/mbonamensa/${id}/branches`)
+    fetch(`https://api.github.com/repos/rommeljose/${id}/branches`)
     .then((response) => (response.json()))
     .then((data) => {
       setBranch(data)
@@ -28,7 +28,7 @@ function RepoDetails() {
   }, []) 
 
   useEffect(() => {
-    fetch(`https://api.github.com/repos/mbonamensa/${id}/deployments`)
+    fetch(`https://api.github.com/repos/rommeljose/${id}/deployments`)
     .then((response) => (response.json()))
     .then((data) => {
       setDeployment(data)
@@ -46,9 +46,9 @@ function RepoDetails() {
                     <p><TbGitFork className="icons" /> Forks: {details.forks}</p>
                     <p><FaCodeBranch className="icons" /> Branches: {branch.length}</p>
                 </div>
-                <p>Main Language: {details.language === null ? "none": details.language}</p>
-                <p>Live site: {deployment.length === 0 ? `none` : <a href={`https://mbonamensa.github.io/${details.name}`}>mbonamensa.github.io/{details.name}</a>}</p>
-                <p><a href={`https://github.com/${details.full_name}`}>View on Github</a></p>
+                <p>Lenguaje principal: {details.language === null ? "none": details.language}</p>
+                <p>Página web: {deployment.length === 0 ? `none` : <a href={`https://rommeljose.github.io/${details.name}`}>rommeljose.github.io/{details.name}</a>}</p>
+                <p><a href={`https://github.com/${details.full_name}`}>Ver en Github</a></p>
 
             </div>
         </div>

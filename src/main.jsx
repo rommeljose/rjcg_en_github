@@ -7,7 +7,16 @@ import RepoDetails from './pages/Repodetails'
 import ErrorPage from './pages/ErrorPage'
 import AppOutlet from './pages/AppOutlet'
 
+import { createRoot } from 'react-dom/client';
 
+// Prueba de React Native:
+// Clear the existing HTML content
+// document.body.innerHTML = '<div id="app"></div>';
+
+// Render your React component instead
+const root = createRoot(document.getElementById('navigation'));
+root.render(<strong>Esto es React empotrado</strong>);
+// Hasta acá
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -17,9 +26,7 @@ const router = createBrowserRouter(
         <Route path=":id" element={<RepoDetails />} />
       </Route>
     </>
- 
 
-    
   )
 );
 
